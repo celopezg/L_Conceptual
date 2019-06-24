@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.4 Inteligencia de negocios | Gestión de la información cuantitativa en las universidades</title>
+  <meta name="description" content="2.4 Inteligencia de negocios | Gestión de la información cuantitativa en las universidades" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.4 Inteligencia de negocios | Gestión de la información cuantitativa en las universidades" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://estadisticaun.github.io/L_Conceptual/" />
+  <meta property="og:image" content="https://estadisticaun.github.io/L_Conceptual/imagenes/Portada_Final.jpg" />
+  
+  <meta name="github-repo" content="estadisticaun/L_Conceptual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.4 Inteligencia de negocios | Gestión de la información cuantitativa en las universidades" />
+  
+  
+  <meta name="twitter:image" content="https://estadisticaun.github.io/L_Conceptual/imagenes/Portada_Final.jpg" />
+
+<meta name="author" content="Alberto Rodríguez Rodríguez" />
+<meta name="author" content="Elizabeth Bernal Gamboa" />
+
+
+<meta name="date" content="2019-06-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-3-analiticamineria-de-datos-analytics.html">
+<link rel="next" href="2-5-estadistica.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-7.0.1/css/motion.css" rel="stylesheet" />
+<link href="libs/highcharts-7.0.1/css/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highcharts-7.0.1/highcharts.js"></script>
+<script src="libs/highcharts-7.0.1/highcharts-3d.js"></script>
+<script src="libs/highcharts-7.0.1/highcharts-more.js"></script>
+<script src="libs/highcharts-7.0.1/modules/stock.js"></script>
+<script src="libs/highcharts-7.0.1/modules/map.js"></script>
+<script src="libs/highcharts-7.0.1/modules/annotations.js"></script>
+<script src="libs/highcharts-7.0.1/modules/boost.js"></script>
+<script src="libs/highcharts-7.0.1/modules/data.js"></script>
+<script src="libs/highcharts-7.0.1/modules/drag-panes.js"></script>
+<script src="libs/highcharts-7.0.1/modules/drilldown.js"></script>
+<script src="libs/highcharts-7.0.1/modules/item-series.js"></script>
+<script src="libs/highcharts-7.0.1/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-7.0.1/modules/overlapping-datalabels.js"></script>
+<script src="libs/highcharts-7.0.1/modules/exporting.js"></script>
+<script src="libs/highcharts-7.0.1/modules/export-data.js"></script>
+<script src="libs/highcharts-7.0.1/modules/funnel.js"></script>
+<script src="libs/highcharts-7.0.1/modules/heatmap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/treemap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/sankey.js"></script>
+<script src="libs/highcharts-7.0.1/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-7.0.1/modules/streamgraph.js"></script>
+<script src="libs/highcharts-7.0.1/modules/sunburst.js"></script>
+<script src="libs/highcharts-7.0.1/modules/vector.js"></script>
+<script src="libs/highcharts-7.0.1/modules/wordcloud.js"></script>
+<script src="libs/highcharts-7.0.1/modules/xrange.js"></script>
+<script src="libs/highcharts-7.0.1/modules/tilemap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/venn.js"></script>
+<script src="libs/highcharts-7.0.1/modules/gantt.js"></script>
+<script src="libs/highcharts-7.0.1/modules/timeline.js"></script>
+<script src="libs/highcharts-7.0.1/modules/parallel-coordinates.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/motion.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/multicolor_series.js"></script>
+<script src="libs/highcharts-7.0.1/custom/reset.js"></script>
+<script src="libs/highcharts-7.0.1/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-7.0.1/custom/text-symbols.js"></script>
+<script src="libs/highchart-binding-0.7.0/highchart.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+<link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+<link href="libs/leaflet-easybutton-1.3.1/easy-button.css" rel="stylesheet" />
+<script src="libs/leaflet-easybutton-1.3.1/easy-button.js"></script>
+<script src="libs/leaflet-easybutton-1.3.1/EasyButton-binding.js"></script>
+<link href="libs/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.7/bootstrap.min.js"></script>
+<link href="libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet" />
+<script src="libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.6/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="libs/jszip-1.10.16/jszip.min.js"></script>
+<script src="libs/pdfmake-1.10.16/pdfmake.min.js"></script>
+<script src="libs/pdfmake-1.10.16/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-1.10.16/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.flash.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.print.min.js"></script>
+<link href="libs/dt-ext-responsive-1.10.16/css/responsive.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-responsive-1.10.16/js/dataTables.responsive.min.js"></script>
+<link href="libs/dt-ext-keytable-1.10.16/css/keyTable.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-keytable-1.10.16/js/dataTables.keyTable.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.css" rel="stylesheet" />
+<script src="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.min.js"></script>
+<script src="libs/dt-plugin-searchhighlight-1.10.16/jquery.highlight.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124538693-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124538693-3');
+</script>
+<link href="libs/unal/css/style.css" rel="stylesheet" />
+<link href="libs/unal/css/bootstrap-buttons.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li></br><center><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Universidad_Nacional_de_Colombia_-_Escudo_2016.svg"  height=50 width="40"> <a href="./">Información cuantitativa en </br> las universidades</a></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Portada</a></li>
+<li><a href="prologo.html#prologo"><strong>Prólogo</strong></a></li>
+<li><a href="agradecimientos.html#agradecimientos"><strong>Agradecimientos</strong></a></li>
+<li><a href="introduccion.html#introduccion"><strong>Introducción</strong></a><ul>
+<li><a href="la-era-de-la-sobreinformacion.html#la-era-de-la-sobreinformacion"><strong>La era de la sobreinformación</strong></a></li>
+<li><a href="especificidad-de-la-gestion-universitaria.html#especificidad-de-la-gestion-universitaria"><strong>Especificidad de la gestión universitaria</strong></a></li>
+<li><a href="gestion-de-la-informacion-cuantitativa-en-las-universidades.html#gestion-de-la-informacion-cuantitativa-en-las-universidades"><strong>Gestión de la información cuantitativa en las universidades</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-Cap01.html"><a href="1-Cap01.html"><i class="fa fa-check"></i><b>1</b> <strong>Nueva gestión pública e información cuantitativa en las universidades</strong></a><ul>
+<li class="chapter" data-level="1.1" data-path="1-1-elementos-de-contexto-para-la-gestion-de-la-informacion-en-las-universidades-en-la-era-de-la-sobreinformacion.html"><a href="1-1-elementos-de-contexto-para-la-gestion-de-la-informacion-en-las-universidades-en-la-era-de-la-sobreinformacion.html"><i class="fa fa-check"></i><b>1.1</b> <strong>Elementos de contexto para la gestión de la información en las universidades en la era de la sobreinformación</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><i class="fa fa-check"></i><b>1.2</b> <strong>Instrumentos de la nueva gestión pública y la información solicitada a las universidades, especialmente a las estatales</strong></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#planeacion"><i class="fa fa-check"></i><b>1.2.1</b> <strong><em>Planeación</em></strong></a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-de-gestion-de-la-calidad-y-la-ntcgp-1000"><i class="fa fa-check"></i><b>1.2.2</b> <strong><em>Sistema de gestión de la calidad y la NTCGP 1000</em></strong></a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#control-interno"><i class="fa fa-check"></i><b>1.2.3</b> <em><strong>Control interno</strong></em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#control-externo"><i class="fa fa-check"></i><b>1.2.4</b> <em><strong>Control externo</strong></em></a></li>
+<li class="chapter" data-level="1.2.5" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#gobierno-digital"><i class="fa fa-check"></i><b>1.2.5</b> <em><strong>Gobierno digital</strong></em></a></li>
+<li class="chapter" data-level="1.2.6" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#transparencia-y-rendicion-de-cuentas"><i class="fa fa-check"></i><b>1.2.6</b> <em><strong>Transparencia y Rendición de Cuentas</strong></em></a></li>
+<li class="chapter" data-level="1.2.7" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#habeas-data"><i class="fa fa-check"></i><b>1.2.7</b> <em><strong>Habeas Data</strong></em></a></li>
+<li class="chapter" data-level="1.2.8" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#modelo-integrado-de-planeacion-y-gestion"><i class="fa fa-check"></i><b>1.2.8</b> <em><strong>Modelo Integrado de Planeación y Gestión</strong></em></a></li>
+<li class="chapter" data-level="1.2.9" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#politica-nacional-de-explotacion-de-datos"><i class="fa fa-check"></i><b>1.2.9</b> <strong><em>Política Nacional de Explotación de Datos</em></strong></a></li>
+<li class="chapter" data-level="1.2.10" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-estadistico-nacional"><i class="fa fa-check"></i><b>1.2.10</b> <em><strong>Sistema Estadístico Nacional</strong></em></a></li>
+<li class="chapter" data-level="1.2.11" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#aseguramiento-de-la-calidad-en-la-educacion-superior"><i class="fa fa-check"></i><b>1.2.11</b> <strong><em>Aseguramiento de la calidad en la educación superior</em></strong></a></li>
+<li class="chapter" data-level="1.2.12" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-universitario-estatal"><i class="fa fa-check"></i><b>1.2.12</b> <strong><em>Sistema Universitario Estatal</em></strong></a></li>
+<li class="chapter" data-level="1.2.13" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#reporte-de-informacion-para-sistemas-nacionales-de-informacion-de-la-educacion-superior"><i class="fa fa-check"></i><b>1.2.13</b> <strong><em>Reporte de información para sistemas nacionales de información de la educación superior</em></strong></a></li>
+<li class="chapter" data-level="1.2.14" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#rankings-universitarios"><i class="fa fa-check"></i><b>1.2.14</b> <strong><em>Rankings universitarios</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><i class="fa fa-check"></i><b>1.3</b> <strong>La nueva gestión pública en la Universidad Nacional de Colombia</strong></a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#planeacion-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.1</b> <em><strong>Planeación en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#sistema-de-gestion-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.2</b> <em><strong>Sistema de Gestión en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.3" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#sistema-de-control-interno-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.3</b> <em><strong>Sistema de control interno en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.4" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#rendicion-de-cuentas-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.4</b> <em><strong>Rendición de cuentas en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.5" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#estadistica-administrativa-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.5</b> <em><strong>Estadística administrativa en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.6" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#aseguramiento-de-la-calidad-academica-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.6</b> <em><strong>Aseguramiento de la calidad académica en la Universidad Nacional de Colombia</strong></em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Cap02.html"><a href="2-Cap02.html"><i class="fa fa-check"></i><b>2</b> <strong>El <em>boom</em> de los datos y el protagonismo de la tecnología</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="2-1-los-datos.html"><a href="2-1-los-datos.html"><i class="fa fa-check"></i><b>2.1</b> <strong>Los datos</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="2-2-big-data.html"><a href="2-2-big-data.html"><i class="fa fa-check"></i><b>2.2</b> <strong><em>Big data</em></strong></a></li>
+<li class="chapter" data-level="2.3" data-path="2-3-analiticamineria-de-datos-analytics.html"><a href="2-3-analiticamineria-de-datos-analytics.html"><i class="fa fa-check"></i><b>2.3</b> <strong>Analítica/minería de datos (<em>analytics</em>)</strong></a></li>
+<li class="chapter" data-level="2.4" data-path="2-4-inteligencia-de-negocios.html"><a href="2-4-inteligencia-de-negocios.html"><i class="fa fa-check"></i><b>2.4</b> <strong>Inteligencia de negocios</strong></a></li>
+<li class="chapter" data-level="2.5" data-path="2-5-estadistica.html"><a href="2-5-estadistica.html"><i class="fa fa-check"></i><b>2.5</b> <strong>Estadística</strong></a></li>
+<li class="chapter" data-level="2.6" data-path="2-6-ciencia-de-los-datos.html"><a href="2-6-ciencia-de-los-datos.html"><i class="fa fa-check"></i><b>2.6</b> <strong>Ciencia de los datos</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Cap03.html"><a href="3-Cap03.html"><i class="fa fa-check"></i><b>3</b> <strong>Gestión de la información cuantitativa en las universidades: el encuentro de dos mundos</strong></a><ul>
+<li class="chapter" data-level="3.1" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><i class="fa fa-check"></i><b>3.1</b> <strong>Contexto de la información cuantitativa en las universidades estatales en Colombia</strong></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.1.-fin-de-la-informacion-cuantitativa-proposito-superior"><i class="fa fa-check"></i><b>3.1.1</b> <strong><em>Nivel 1.1. Fin de la información cuantitativa –propósito superior–</em></strong></a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.2.-politicas-normas-actores-nacionales-e-internacionales"><i class="fa fa-check"></i><b>3.1.2</b> <strong><em>Nivel 1.2. Políticas, normas, actores nacionales e internacionales</em></strong></a></li>
+<li class="chapter" data-level="3.1.3" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.3.-demandas-de-informacion"><i class="fa fa-check"></i><b>3.1.3</b> <strong><em>Nivel 1.3. Demandas de información</em></strong></a></li>
+<li class="chapter" data-level="3.1.4" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.4.-modelo-de-gestion-administrativa-y-estructura-organizacional"><i class="fa fa-check"></i><b>3.1.4</b> <strong><em>Nivel 1.4. Modelo de gestión administrativa y estructura organizacional</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html"><i class="fa fa-check"></i><b>3.2</b> <strong>Contexto académico y técnico de los datos</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.1.-tipos-de-datos"><i class="fa fa-check"></i><b>3.2.1</b> <strong><em>Nivel 2.1. Tipos de datos</em></strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.2.-disciplinas-y-tendencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><em>Nivel 2.2. Disciplinas y tendencias</em></strong></a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.3.-aproximaciones-enfasis"><i class="fa fa-check"></i><b>3.2.3</b> <strong><em>Nivel 2.3. Aproximaciones – Énfasis</em></strong></a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.4.-metodos-y-tecnicas"><i class="fa fa-check"></i><b>3.2.4</b> <strong><em>Nivel 2.4. Métodos y técnicas</em></strong></a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.5.-fundamentos-bases-teoricas"><i class="fa fa-check"></i><b>3.2.5</b> <strong><em>Nivel 2.5. Fundamentos – Bases teóricas</em></strong></a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.6.-herramientas"><i class="fa fa-check"></i><b>3.2.6</b> <strong><em>Nivel 2.6. Herramientas</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-3-en-sintesis.html"><a href="3-3-en-sintesis.html"><i class="fa fa-check"></i><b>3.3</b> <strong>En síntesis</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Cap04.html"><a href="4-Cap04.html"><i class="fa fa-check"></i><b>4</b> <strong>Cuantificación y medición en las universidades - Una aproximación descriptiva</strong></a><ul>
+<li class="chapter" data-level="4.1" data-path="4-1-que-y-como-medir.html"><a href="4-1-que-y-como-medir.html"><i class="fa fa-check"></i><b>4.1</b> <strong>¿Qué y cómo medir?</strong></a></li>
+<li class="chapter" data-level="4.2" data-path="4-2-diferencia-entre-estadisticas-e-indicadores.html"><a href="4-2-diferencia-entre-estadisticas-e-indicadores.html"><i class="fa fa-check"></i><b>4.2</b> <strong>Diferencia entre estadísticas e indicadores</strong></a></li>
+<li class="chapter" data-level="4.3" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><i class="fa fa-check"></i><b>4.3</b> <strong>Once características asociadas a las estadísticas</strong></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#construidas-a-partir-de-informacion-poblacional-o-muestral"><i class="fa fa-check"></i><b>4.3.1</b> <strong><em>Construidas a partir de información poblacional o muestral</em></strong></a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#conformar-cifras-agregadas"><i class="fa fa-check"></i><b>4.3.2</b> <strong><em>Conformar cifras agregadas</em></strong></a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#caracterizar-y-desagregar-rasgos-de-interes-de-los-individuos-que-conforman-las-poblaciones-o-muestras"><i class="fa fa-check"></i><b>4.3.3</b> <strong><em>Caracterizar y desagregar rasgos de interés de los individuos que conforman las poblaciones o muestras</em></strong></a></li>
+<li class="chapter" data-level="4.3.4" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#representar-el-presente-y-el-pasado"><i class="fa fa-check"></i><b>4.3.4</b> <strong><em>Representar el presente y el pasado</em></strong></a></li>
+<li class="chapter" data-level="4.3.5" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#tener-la-capacidad-de-reconocer-y-representar-el-comportamiento-de-grupos-poblacionales-minoritarios"><i class="fa fa-check"></i><b>4.3.5</b> <strong><em>Tener la capacidad de reconocer y representar el comportamiento de grupos poblacionales minoritarios</em></strong></a></li>
+<li class="chapter" data-level="4.3.6" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#poder-ser-representadas-de-manera-tabular-y-grafica"><i class="fa fa-check"></i><b>4.3.6</b> <strong><em>Poder ser representadas de manera tabular y gráfica</em></strong></a></li>
+<li class="chapter" data-level="4.3.7" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#estar-orientadas-y-delimitadas-por-normas-y-conceptos-estandares-clasificaciones-y-nomenclaturas"><i class="fa fa-check"></i><b>4.3.7</b> <strong><em>Estar orientadas y delimitadas por normas y conceptos, estándares, clasificaciones y nomenclaturas</em></strong></a></li>
+<li class="chapter" data-level="4.3.8" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#estar-disponibles-a-traves-de-multiples-mecanismos-de-difusion-y-comunicacion"><i class="fa fa-check"></i><b>4.3.8</b> <strong><em>Estar disponibles a través de múltiples mecanismos de difusión y comunicación</em></strong></a></li>
+<li class="chapter" data-level="4.3.9" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#hacer-uso-intensivo-de-las-nuevas-tecnologias-de-la-informacion-y-las-comunicaciones"><i class="fa fa-check"></i><b>4.3.9</b> <strong><em>Hacer uso intensivo de las nuevas tecnologías de la información y las comunicaciones</em></strong></a></li>
+<li class="chapter" data-level="4.3.10" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#ser-construidas-a-traves-de-un-proceso-estadistico"><i class="fa fa-check"></i><b>4.3.10</b> <strong><em>Ser construidas a través de un proceso estadístico</em></strong></a></li>
+<li class="chapter" data-level="4.3.11" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#aportar-a-la-creacion-de-nuevas-estadisticas-o-indicadores"><i class="fa fa-check"></i><b>4.3.11</b> <strong><em>Aportar a la creación de nuevas estadísticas o indicadores</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><i class="fa fa-check"></i><b>4.4</b> <strong>Indicadores de desarrollo o cumplimiento</strong></a><ul>
+<li class="chapter" data-level="4.4.1" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html#gestion-de-indicadores-de-desarrollo-o-cumplimiento"><i class="fa fa-check"></i><b>4.4.1</b> <strong><em>Gestión de indicadores de desarrollo o cumplimiento</em></strong></a></li>
+<li class="chapter" data-level="4.4.2" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html#tipos-de-indicadores-de-desarrollo-o-cumplimiento"><i class="fa fa-check"></i><b>4.4.2</b> <strong><em>Tipos de indicadores de desarrollo o cumplimiento</em></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-conclusiones-y-recomendaciones.html"><a href="5-conclusiones-y-recomendaciones.html"><i class="fa fa-check"></i><b>5</b> <strong>Conclusiones y recomendaciones</strong></a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><center><a href="http://unal.edu.co/" target="blank"> Universidad Nacional de Colombia </a></center></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Gestión de la información cuantitativa en las universidades</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="inteligencia-de-negocios" class="section level2">
+<h2><span class="header-section-number">2.4</span> <strong>Inteligencia de negocios</strong></h2>
+<p>La <em>inteligencia de negocios (BI por sus siglas en inglés: Business Intelligence)</em>, cuya acepción se presume fue acuñada por primera vez en los años noventa del siglo XX por miembros de la empresa Gartner, es considerada como “el conjunto de aplicaciones, infraestructura, herramientas y mejores prácticas que permiten el acceso y análisis de la información para mejorar y optimizar el desempeño de las organizaciones”<a href="#fn96" class="footnote-ref" id="fnref96"><sup>96</sup></a>. En la figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a> se presenta la arquitectura típica genérica que acompaña un modelo de inteligencia de negocios<a href="#fn97" class="footnote-ref" id="fnref97"><sup>97</sup></a> a través del cual, aprovechando las bondades que nos ofrece la tecnología, es posible disponer de información cuantitativa oportuna y de calidad para la toma de decisiones institucionales.</p>
+<p>Los datos contenidos en bases de datos de sistemas de información transaccionales internos, datos contenidos en otros registros internos, así como datos disponibles en fuentes externas de información, conforman el primer elemento de un modelo de inteligencia de negocios. Los datos almacenados en las bases de datos asociadas a los sistemas de información SQL o NoSQL, como se ilustra en la figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a>, son la fuente central en el modelo. De manera complementaria, en las organizaciones aún existe información interna que no se encuentra almacenada en sus bases de datos o que es de naturaleza externa y no está bajo su gobernabilidad, pero que es de interés por el valor institucional de la misma para la toma de decisiones. Un ejemplo de fuente de información externa de interés de las universidades públicas y privadas en Colombia son los resultados obtenidos por los estudiantes en las competencias genéricas y específicas del Examen de Estado de Calidad de la Educación Superior Saber Pro a cargo del Instituto Colombiano para la Evaluación de la Educación (Icfes).</p>
+<div class="figure" style="text-align: center"><span id="fig:fig3"></span>
+<img src="imagenes/BI.png" alt="Arquitectura tecnológica típica de un modelo de inteligencia de negocios. Adaptación con base en arquitecturas semejantes. Fuente: elaboración propia." width="90%" />
+<p class="caption">
+Figura 2.1: Arquitectura tecnológica típica de un modelo de inteligencia de negocios. Adaptación con base en arquitecturas semejantes. Fuente: elaboración propia.
+</p>
+</div>
+<p>El segundo componente de un modelo de inteligencia de negocios lo conforman las herramientas tecnológicas centradas en la extracción (E), transformación (T) y carga de los datos (L) con propósitos analíticos (ETL). Los datos de interés que se encuentran disponibles en las bases de datos de los sistemas de información y en otras fuentes internas y externas deben ser extraídos y luego transformados, de acuerdo con las necesidades que se tengan en términos de información institucional para finalmente ser cargados en un lugar especial para su posterior uso. Los procesos ETL se enfrentan a una realidad que presenta una buena parte de los sistemas de información institucional y que llevan al fracaso de una gran proporción de este tipo de iniciativas, como son: desconocimiento de la arquitectura de las bases de datos institucionales<a href="#fn98" class="footnote-ref" id="fnref98"><sup>98</sup></a>, duplicidad de acciones semejantes en diferentes sistemas, tecnologías distintas, una alta cantidad de sistemas de información, bajos niveles de interoperabilidad entre los sistemas, poca calidad de los datos almacenados, ausencia de codificaciones y bajo uso de estándares institucionales, nacionales e internacionales, entre otros criterios. Si estos aspectos no son analizados y resueltos pueden impedir el desarrollo de un proyecto de inteligencia de negocios a nivel institucional.</p>
+<p>Los datos que son extraídos (E) de las bases de datos u otras fuen- tes de interés institucional y luego son trasformados (T) con propósitos analíticos son almacenados, en una apuesta tradicional de BI, en bases de datos conocidas como bodegas de datos (Data Warehouse DW), Data Marts DM o Data Lakes<a href="#fn99" class="footnote-ref" id="fnref99"><sup>99</sup></a>; estos conforman el tercer elemento en una arquitectura y apuesta de BI (figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a>) y son quizá el corazón de este tipo de iniciativas, pues es allí donde se encuentra almacenada la información requerida para los análisis y la toma de decisiones institucionales.</p>
+<p>Según Gartner, “una bodega de datos<a href="#fn100" class="footnote-ref" id="fnref100"><sup>100</sup></a> es una arquitectura de almacenamiento de información diseñada para mantener datos extraídos de sistemas transaccionales, bodegas de datos operacionales y fuentes externas”<a href="#fn101" class="footnote-ref" id="fnref101"><sup>101</sup></a>. Así mismo, según Oracle, “una bodega de datos es una base de datos diseñada para permitir las actividades de inteligencia de negocios: existe para ayudar a los usuarios a comprender y mejorar el rendimiento de la organización<a href="#fn102" class="footnote-ref" id="fnref102"><sup>102</sup></a>. Las bodegas de datos están orientadas principalmente al almacenamiento, la consulta y el análisis de datos históricos provenientes de bases de datos relacionales y se valen, para ello, de una arquitectura e infraestructura especial<a href="#fn103" class="footnote-ref" id="fnref103"><sup>103</sup></a>. Aunque existen diversas propuestas de arquitectura para las bodegas de datos y en sí para una apuesta de BI<a href="#fn104" class="footnote-ref" id="fnref104"><sup>104</sup></a>, el debate en general se centra en dos paradigmas: la arquitectura propuesta por <span class="citation">Kimball, Ralph y Ross, Margy (<a href="#ref-kimball2013data">2013</a>)</span> y la propuesta por <span class="citation">Inmon (<a href="#ref-inmon2005building">2005</a>)</span>.</p>
+<p>El cuarto y el quinto de los componentes de una arquitectura típica de una apuesta de inteligencia de negocios BI lo conforman las herramientas y aplicaciones tecnológicas encargadas de suministrar las cifras de interés institucional a los usuarios e interesados finales. Estos componentes, que se ilustran gráficamente en las partes 4 y 5 de la figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a>, agrupan un número importante de aplicaciones entre las que se destacan los datacubos, los reportes y los cuadros de mando, tableros o <em>dashboards</em>.</p>
+<p>En primer lugar, los datacubos, cubos de datos o cubos de información son una estrategia tecnológica empleada para dos propósitos principales: como mecanismo previo para la disposición y visualización de las cifras requeridas a nivel institucional (componente 4 de la figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a>) o con el objetivo de que el usuario final interactúe, de manera tabular y en línea, con el fin de construir, reconstruir y extraer, desde múltiples perspectivas/dimensiones, información de interés particular contenida en los Data Marts y en las bodegas de datos. En un sentido general, un cubo de datos es equivalente a las funciones que cumple una tabla dinámica en Excel, con la diferencia de que esta se encuentra disponible en línea.</p>
+<p>En segundo lugar, los reportes son una estrategia empleada para suministrar tecnológicamente información tabular que contiene cifras de interés institucional, de alta utilidad para aquellas organizaciones o entidades que requieren suministrar informes o <em>microdatos</em> de manera periódica a actores internos o externos.</p>
+<p>En tercer lugar, los tableros de mando o <em>dashboards</em> conforman la apuesta gráfica para el seguimiento y la presentación de las cifras, principalmente de naturaleza descriptiva, de una organización y son, de lejos, el mecanismo tecnológico más empleado para gestionar la información cuantitativa institucional en una organización guiada por una apuesta de inteligencia de negocios.</p>
+<p>Aunque los <em>dashboards</em> pueden ser empleados en una entidad para presentar información de manera gráfica y tabular proveniente de datos de cualquier naturaleza y complejidad, desde sus orígenes han sido ampliamente empleados para representar información gráfica de tipo descriptivo y derivada de fuentes estructuradas o, a lo sumo, semiestructuradas. Conteos, tortas, diagramas de barras, histogramas, diagramas de caja (<em>box plots</em>), mapas, diagramas de líneas, gráficos de dispersión, barras de progreso, velocímetros, etc., conforman, con una alta frecuencia, la estructura de los objetos gráficos<a href="#fn105" class="footnote-ref" id="fnref105"><sup>105</sup></a> de un <em>dashboard</em> tradicional. Este tipo de instrumentos, que alcanzaron una alta popularidad especialmente en el sector privado a finales del siglo pasado e inicios del actual, es la estrategia que más se utiliza en la actualidad por las entidades que están incursionando de manera decidida en la gestión de la información cuantitativa institucional y consideran la tecnología como su aliado para este propósito.</p>
+<p>El diseño y la construcción de <em>dashboards</em> o de otra estrategia institucional a través de la cual se suministra información cuantitativa de manera tabular y gráfica que permita apoyar la toma de decisiones institucionales y rendir cuentas a la sociedad a través de la apertura de sus cifras (transparencia) implica, a su vez, el dominio, el conocimiento y la disposición principalmente de dos elementos centrales y constitutivos de las mismas: la construcción de gráficos y la disposición, acceso y dominio de herramientas tecnológicas modernas para su visualización<a href="#fn106" class="footnote-ref" id="fnref106"><sup>106</sup></a>.</p>
+<p>Aunque se cree que la construcción y representación gráfica de cifras cuantitativas es sencilla y relativamente moderna, esta tiene raíces históricas profundas construidas durante siglos de historia en donde consideraciones psicológicas, sociológicas, artísticas, estéticas, estadísticas y recientemente computacionales han jugado un rol central en su diseño, construcción y disposición. Estos requisitos, muy pocas veces conocidos y dominados en el contexto de la construcción de gráficos almacenados en <em>dashboards</em> institucionales son fundamentales en el mensaje que pretende ser llevado y, en muchos casos, son una de las piezas centrales de abuso y desinformación de aquello que pretende ser contado a través de una representación gráfica<a href="#fn107" class="footnote-ref" id="fnref107"><sup>107</sup></a>.</p>
+<p>Finalmente, la disposición de gráficos para representar cifras institucionales es una actividad que ha adquirido un alto interés y desarrollo desde una perspectiva tecnológica durante los últimos años. Del boletín estadístico, cuyos objetos gráficos en un principio eran diseñados y construidos por dibujantes, hemos pasado a disponer de un sinnúmero de herramientas tecnológicas de uso comercial o libre en donde el estadistico, ingeniero, diseñador, técnico u otro experto con habilidades para el dominio de este tipo de herramientas son los encargados de su construcción y visualización.</p>
+<p>Aunque actualmente existen cientos de herramientas tecnológicas de alcance comercial o libre para la construcción y visualización de gráficos que permitan representar cifras institucionales<a href="#fn108" class="footnote-ref" id="fnref108"><sup>108</sup></a>, en el contexto de la inteligencia de negocios sobresalen software para tal propósito como Tableau, PowerBI, OBIEE, Qlik, Pentaho, SAS, IBM, SAP, R, Phyton, principalmente. En otras palabras, en el escenario de la inteligencia de negocios o de cualquier otra estrategia emprendida por las instituciones para representar y entregar información cuantitativa institucional a través del uso de TIC, el problema no es la ausencia de herramientas sino la abundancia de las mismas, así como el dominio y la capacidad institucional de selección de las que mejor convengan.</p>
+<p>El <em>Big Data</em>, la analítica o minería de datos y la inteligencia de negocios, como acabamos de presentar, tienen dos denominadores comunes: son herramientas o fenómenos que han surgido y se han desarrollado durante los últimos años y se valen de manera intensiva para su desarrollo del dominio y acceso a las TIC. No obstante, la analítica de datos apunta a la extracción de conocimiento oculto existente en datos y expresable a través de patrones extrapolables a escenarios futuros (enfoque predictivo); del <em>Big Data</em>, a la extracción de conocimiento útil contenido en grandes volúmenes de datos, con diversas estructuras y a una gran velocidad y, finalmente, la inteligencia de negocios, a la disposición de una arquitectura tecnológica útil para la extracción y presentación regular de la información contenida en los datos disponibles en una entidad. Estas tres tendencias contemporáneas de abordaje y estudio de los datos son hijas del avance de las TIC, pero el fin buscado con su implementación se ha conservado desde el surgimiento de los Estados modernos: conocimiento para comprender la realidad y tomar las mejores decisiones. Estas nuevas formas de aproximación y estudio de los datos han llegado para acompañar el uso de las técnicas tradicionales de análisis estadístico y enriquecer, con nuevos recursos y aproximaciones, el estudio y la extracción del conocimiento contenido en los datos disponibles a nivel institucional.</p>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references">
+<div id="ref-inmon2005building">
+<p>Inmon, William H. 2005. <em>Building the Data Warehouse</em>. John Wiley &amp; Sons.</p>
+</div>
+<div id="ref-kimball2013data">
+<p>Kimball, Ralph y Ross, Margy. 2013. <em>The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling</em>. John Wiley &amp; Sons.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="96">
+<li id="fn96"><p>Ver blog, en <a href="http://blogs.gartner.com/it-glossary/business-intelligence-bi/" class="uri">http://blogs.gartner.com/it-glossary/business-intelligence-bi/</a><a href="2-4-inteligencia-de-negocios.html#fnref96" class="footnote-back">↩</a></p></li>
+<li id="fn97"><p>Dado el propósito del presente documento, son muchos los aspectos particulares asociados a la inteligencia de negocios que no se incluyen en este trabajo.<a href="2-4-inteligencia-de-negocios.html#fnref97" class="footnote-back">↩</a></p></li>
+<li id="fn98"><p>A esta realidad se enfrenta cualquier apuesta institucional interesada en extraer cifras oficiales para la toma de decisiones, independientemente de si el proceso se lleva a cabo mediante una apuesta de BI o mediante otra iniciativa. No en vano, como menciona <span class="citation">(Wickham <a href="#ref-wickham2014tidy">2014</a>)</span>, alrededor de un 80% del proceso de extracción de con cimiento a través de datos se dedica a actividades de limpieza y ajuste de los datos requeridos.<a href="2-4-inteligencia-de-negocios.html#fnref98" class="footnote-back">↩</a></p></li>
+<li id="fn99"><p>Los Data Marts y las bodegas de datos son instrumentos tecnológicos empleados para el almacenamiento de datos provenientes de bases de datos que contienen información estructurada, mientras que los Data Lakes o lagos de datos son empleados para el acopio de datos carentes de estructura o no estructurados, principalmente.<a href="2-4-inteligencia-de-negocios.html#fnref99" class="footnote-back">↩</a></p></li>
+<li id="fn100"><p>Aunque en la figura <a href="2-4-inteligencia-de-negocios.html#fig:fig3">2.1</a> se presentan los Data Marts, las bodegas de datos DW y los Data Lakes como herramientas tecnológicas distintas, todas en sí son bodegas de datos dada su orientación hacia el almacenamiento de información obtenida a través de los datos disponibles en los sistemas de información transaccionales, principalmente. Los Data Marts están orientados a almacenar información proveniente de datos estructurados de un único tema o sector dentro de una organización, las DW a almacenar información estructurada proveniente de todos los temas o sectores de una organización, y los Data Lakes a almacenar la información proveniente de datos no estructurados o semiestructurados.<a href="2-4-inteligencia-de-negocios.html#fnref100" class="footnote-back">↩</a></p></li>
+<li id="fn101"><p>Ver <em>IT Glossary</em>, en <a href="https://www.gartner.com/it-glossary/data-warehouse" class="uri">https://www.gartner.com/it-glossary/data-warehouse</a><a href="2-4-inteligencia-de-negocios.html#fnref101" class="footnote-back">↩</a></p></li>
+<li id="fn102"><p>Ver <em>Database Data Warehousing Guide</em>, en <a href="https://docs.oracle.com/database/121/DWHSG/concept.htm#DWHSG001" class="uri">https://docs.oracle.com/database/121/DWHSG/concept.htm#DWHSG001</a><a href="2-4-inteligencia-de-negocios.html#fnref102" class="footnote-back">↩</a></p></li>
+<li id="fn103"><p>Las bases de datos relacionales están soportadas en una arquitectura que permite ejecutar un número elevado de operaciones o transacciones que a diario se realizan en una organización (contrataciones, compras, pagos, etc.). En contraste, las bodegas de datos están soportadas en una arquitectura orientada al almacenamiento y la disposición de los datos requeridos para el análisis y la toma de decisiones institucionales. Estas dos arquitecturas distan de manera significativa, hecho que exige ser diseñadas, construidas y administradas de manera diferencial<a href="2-4-inteligencia-de-negocios.html#fnref103" class="footnote-back">↩</a></p></li>
+<li id="fn104"><p>Cuando una apuesta de BI se concentra en un tema área de una entidad, el mecanismo de almacenamiento de los datos no se llama bodega de datos sino Data Mart. En otras palabras, un Data Mart es una base de datos orientada a almacenar la información de un tema puntual o área dentro de una organización como, por ejemplo, para el caso de una universidad, los datos académicos, de investigación o financieros.<a href="2-4-inteligencia-de-negocios.html#fnref104" class="footnote-back">↩</a></p></li>
+<li id="fn105"><p>En el sitio web <a href="http://visualizationuniverse.com/" class="uri">http://visualizationuniverse.com/</a> se presenta una propuesta con un inventario de los tipos de gráficos hoy disponibles para la representación gráfica de datos así como otros recursos asociados a la visualización de datos.<a href="2-4-inteligencia-de-negocios.html#fnref105" class="footnote-back">↩</a></p></li>
+<li id="fn106"><p>En el ámbito de lo público, y en especial en el contexto de la transparencia institucional, como veremos más adelante, existe un tercer elemento central que es el de los metadatos o descripción del lenguaje que acompañan las cifras institucionales para que estas sean comprendidas y usadas de la manera correcta por los usuarios de la información expuesta.<a href="2-4-inteligencia-de-negocios.html#fnref106" class="footnote-back">↩</a></p></li>
+<li id="fn107"><p>Entre los trabajos destacados en esta dirección resaltamos los de <span class="citation">Friendly et al. (<a href="#ref-friendly2008handbook">2008</a>)</span>; <span class="citation">Tufte and Graves-Morris (<a href="#ref-tufte1997">1997</a>)</span>; <span class="citation">Chambers (<a href="#ref-chambers2017graphical">2017</a>)</span>; <span class="citation">Cleveland, William S y Cleveland, William S (<a href="#ref-cleveland1985elements">1985</a>)</span>, y <span class="citation">Wilkinson (<a href="#ref-wilkinson">1999</a>)</span>, los cuales invitamos a explorar y estudiar.<a href="2-4-inteligencia-de-negocios.html#fnref107" class="footnote-back">↩</a></p></li>
+<li id="fn108"><p>En el sitio web <a href="https://keshif.me/demo/VisTools#515" class="uri">https://keshif.me/demo/VisTools#515</a> se presenta un inventario con más de 400 herramientas tecnológicas muchas de las cuales pueden ser usadas en una apuesta de BI a nivel institucional.<a href="2-4-inteligencia-de-negocios.html#fnref108" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+<script src="libs/unal/js/widgets.js"></script>
+<script src="libs/unal/js/full-screen-helper.js"></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-3-analiticamineria-de-datos-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-5-estadistica.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Libro-Conceptual.pdf", "Libro-Conceptual.epub", "Libro-Conceptual.mobi"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

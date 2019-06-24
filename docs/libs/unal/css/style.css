@@ -1,0 +1,15 @@
+.full-screen-button{
+	margin-top: 10px;
+}
+
+.html-widget{
+	width: 100% !important;
+	overflow: auto;
+}
+
+.full-screen-helper{
+	height: 100vh !important;
+	width: 100% !important;
+}
+
+

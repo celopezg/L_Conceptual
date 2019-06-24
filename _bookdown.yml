@@ -1,0 +1,10 @@
+book_filename: "Libro-Conceptual"
+repo: https://estadisticaun.github.io/L_Conceptual/
+language:
+  label:
+    fig: "Figura "
+    tab: "Tabla "
+  ui:
+    chapter_name: "Capítulo "
+delete_merged_file: true
+output_dir: "docs"

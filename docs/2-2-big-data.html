@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.2 Big data | Gestión de la información cuantitativa en las universidades</title>
+  <meta name="description" content="2.2 Big data | Gestión de la información cuantitativa en las universidades" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.2 Big data | Gestión de la información cuantitativa en las universidades" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://estadisticaun.github.io/L_Conceptual/" />
+  <meta property="og:image" content="https://estadisticaun.github.io/L_Conceptual/imagenes/Portada_Final.jpg" />
+  
+  <meta name="github-repo" content="estadisticaun/L_Conceptual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.2 Big data | Gestión de la información cuantitativa en las universidades" />
+  
+  
+  <meta name="twitter:image" content="https://estadisticaun.github.io/L_Conceptual/imagenes/Portada_Final.jpg" />
+
+<meta name="author" content="Alberto Rodríguez Rodríguez" />
+<meta name="author" content="Elizabeth Bernal Gamboa" />
+
+
+<meta name="date" content="2019-06-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-1-los-datos.html">
+<link rel="next" href="2-3-analiticamineria-de-datos-analytics.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-7.0.1/css/motion.css" rel="stylesheet" />
+<link href="libs/highcharts-7.0.1/css/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highcharts-7.0.1/highcharts.js"></script>
+<script src="libs/highcharts-7.0.1/highcharts-3d.js"></script>
+<script src="libs/highcharts-7.0.1/highcharts-more.js"></script>
+<script src="libs/highcharts-7.0.1/modules/stock.js"></script>
+<script src="libs/highcharts-7.0.1/modules/map.js"></script>
+<script src="libs/highcharts-7.0.1/modules/annotations.js"></script>
+<script src="libs/highcharts-7.0.1/modules/boost.js"></script>
+<script src="libs/highcharts-7.0.1/modules/data.js"></script>
+<script src="libs/highcharts-7.0.1/modules/drag-panes.js"></script>
+<script src="libs/highcharts-7.0.1/modules/drilldown.js"></script>
+<script src="libs/highcharts-7.0.1/modules/item-series.js"></script>
+<script src="libs/highcharts-7.0.1/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-7.0.1/modules/overlapping-datalabels.js"></script>
+<script src="libs/highcharts-7.0.1/modules/exporting.js"></script>
+<script src="libs/highcharts-7.0.1/modules/export-data.js"></script>
+<script src="libs/highcharts-7.0.1/modules/funnel.js"></script>
+<script src="libs/highcharts-7.0.1/modules/heatmap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/treemap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/sankey.js"></script>
+<script src="libs/highcharts-7.0.1/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-7.0.1/modules/streamgraph.js"></script>
+<script src="libs/highcharts-7.0.1/modules/sunburst.js"></script>
+<script src="libs/highcharts-7.0.1/modules/vector.js"></script>
+<script src="libs/highcharts-7.0.1/modules/wordcloud.js"></script>
+<script src="libs/highcharts-7.0.1/modules/xrange.js"></script>
+<script src="libs/highcharts-7.0.1/modules/tilemap.js"></script>
+<script src="libs/highcharts-7.0.1/modules/venn.js"></script>
+<script src="libs/highcharts-7.0.1/modules/gantt.js"></script>
+<script src="libs/highcharts-7.0.1/modules/timeline.js"></script>
+<script src="libs/highcharts-7.0.1/modules/parallel-coordinates.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/motion.js"></script>
+<script src="libs/highcharts-7.0.1/plugins/multicolor_series.js"></script>
+<script src="libs/highcharts-7.0.1/custom/reset.js"></script>
+<script src="libs/highcharts-7.0.1/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-7.0.1/custom/text-symbols.js"></script>
+<script src="libs/highchart-binding-0.7.0/highchart.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+<link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+<link href="libs/leaflet-easybutton-1.3.1/easy-button.css" rel="stylesheet" />
+<script src="libs/leaflet-easybutton-1.3.1/easy-button.js"></script>
+<script src="libs/leaflet-easybutton-1.3.1/EasyButton-binding.js"></script>
+<link href="libs/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.7/bootstrap.min.js"></script>
+<link href="libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet" />
+<script src="libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.6/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="libs/jszip-1.10.16/jszip.min.js"></script>
+<script src="libs/pdfmake-1.10.16/pdfmake.min.js"></script>
+<script src="libs/pdfmake-1.10.16/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-1.10.16/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.flash.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-1.10.16/js/buttons.print.min.js"></script>
+<link href="libs/dt-ext-responsive-1.10.16/css/responsive.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-responsive-1.10.16/js/dataTables.responsive.min.js"></script>
+<link href="libs/dt-ext-keytable-1.10.16/css/keyTable.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-keytable-1.10.16/js/dataTables.keyTable.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.css" rel="stylesheet" />
+<script src="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.min.js"></script>
+<script src="libs/dt-plugin-searchhighlight-1.10.16/jquery.highlight.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124538693-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124538693-3');
+</script>
+<link href="libs/unal/css/style.css" rel="stylesheet" />
+<link href="libs/unal/css/bootstrap-buttons.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li></br><center><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Universidad_Nacional_de_Colombia_-_Escudo_2016.svg"  height=50 width="40"> <a href="./">Información cuantitativa en </br> las universidades</a></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Portada</a></li>
+<li><a href="prologo.html#prologo"><strong>Prólogo</strong></a></li>
+<li><a href="agradecimientos.html#agradecimientos"><strong>Agradecimientos</strong></a></li>
+<li><a href="introduccion.html#introduccion"><strong>Introducción</strong></a><ul>
+<li><a href="la-era-de-la-sobreinformacion.html#la-era-de-la-sobreinformacion"><strong>La era de la sobreinformación</strong></a></li>
+<li><a href="especificidad-de-la-gestion-universitaria.html#especificidad-de-la-gestion-universitaria"><strong>Especificidad de la gestión universitaria</strong></a></li>
+<li><a href="gestion-de-la-informacion-cuantitativa-en-las-universidades.html#gestion-de-la-informacion-cuantitativa-en-las-universidades"><strong>Gestión de la información cuantitativa en las universidades</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-Cap01.html"><a href="1-Cap01.html"><i class="fa fa-check"></i><b>1</b> <strong>Nueva gestión pública e información cuantitativa en las universidades</strong></a><ul>
+<li class="chapter" data-level="1.1" data-path="1-1-elementos-de-contexto-para-la-gestion-de-la-informacion-en-las-universidades-en-la-era-de-la-sobreinformacion.html"><a href="1-1-elementos-de-contexto-para-la-gestion-de-la-informacion-en-las-universidades-en-la-era-de-la-sobreinformacion.html"><i class="fa fa-check"></i><b>1.1</b> <strong>Elementos de contexto para la gestión de la información en las universidades en la era de la sobreinformación</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><i class="fa fa-check"></i><b>1.2</b> <strong>Instrumentos de la nueva gestión pública y la información solicitada a las universidades, especialmente a las estatales</strong></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#planeacion"><i class="fa fa-check"></i><b>1.2.1</b> <strong><em>Planeación</em></strong></a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-de-gestion-de-la-calidad-y-la-ntcgp-1000"><i class="fa fa-check"></i><b>1.2.2</b> <strong><em>Sistema de gestión de la calidad y la NTCGP 1000</em></strong></a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#control-interno"><i class="fa fa-check"></i><b>1.2.3</b> <em><strong>Control interno</strong></em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#control-externo"><i class="fa fa-check"></i><b>1.2.4</b> <em><strong>Control externo</strong></em></a></li>
+<li class="chapter" data-level="1.2.5" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#gobierno-digital"><i class="fa fa-check"></i><b>1.2.5</b> <em><strong>Gobierno digital</strong></em></a></li>
+<li class="chapter" data-level="1.2.6" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#transparencia-y-rendicion-de-cuentas"><i class="fa fa-check"></i><b>1.2.6</b> <em><strong>Transparencia y Rendición de Cuentas</strong></em></a></li>
+<li class="chapter" data-level="1.2.7" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#habeas-data"><i class="fa fa-check"></i><b>1.2.7</b> <em><strong>Habeas Data</strong></em></a></li>
+<li class="chapter" data-level="1.2.8" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#modelo-integrado-de-planeacion-y-gestion"><i class="fa fa-check"></i><b>1.2.8</b> <em><strong>Modelo Integrado de Planeación y Gestión</strong></em></a></li>
+<li class="chapter" data-level="1.2.9" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#politica-nacional-de-explotacion-de-datos"><i class="fa fa-check"></i><b>1.2.9</b> <strong><em>Política Nacional de Explotación de Datos</em></strong></a></li>
+<li class="chapter" data-level="1.2.10" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-estadistico-nacional"><i class="fa fa-check"></i><b>1.2.10</b> <em><strong>Sistema Estadístico Nacional</strong></em></a></li>
+<li class="chapter" data-level="1.2.11" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#aseguramiento-de-la-calidad-en-la-educacion-superior"><i class="fa fa-check"></i><b>1.2.11</b> <strong><em>Aseguramiento de la calidad en la educación superior</em></strong></a></li>
+<li class="chapter" data-level="1.2.12" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#sistema-universitario-estatal"><i class="fa fa-check"></i><b>1.2.12</b> <strong><em>Sistema Universitario Estatal</em></strong></a></li>
+<li class="chapter" data-level="1.2.13" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#reporte-de-informacion-para-sistemas-nacionales-de-informacion-de-la-educacion-superior"><i class="fa fa-check"></i><b>1.2.13</b> <strong><em>Reporte de información para sistemas nacionales de información de la educación superior</em></strong></a></li>
+<li class="chapter" data-level="1.2.14" data-path="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html"><a href="1-2-instrumentos-de-la-nueva-gestion-publica-y-la-informacion-solicitada-a-las-universidades-especialmente-a-las-estatales.html#rankings-universitarios"><i class="fa fa-check"></i><b>1.2.14</b> <strong><em>Rankings universitarios</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><i class="fa fa-check"></i><b>1.3</b> <strong>La nueva gestión pública en la Universidad Nacional de Colombia</strong></a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#planeacion-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.1</b> <em><strong>Planeación en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#sistema-de-gestion-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.2</b> <em><strong>Sistema de Gestión en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.3" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#sistema-de-control-interno-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.3</b> <em><strong>Sistema de control interno en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.4" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#rendicion-de-cuentas-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.4</b> <em><strong>Rendición de cuentas en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.5" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#estadistica-administrativa-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.5</b> <em><strong>Estadística administrativa en la Universidad Nacional de Colombia</strong></em></a></li>
+<li class="chapter" data-level="1.3.6" data-path="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html"><a href="1-3-la-nueva-gestion-publica-en-la-universidad-nacional-de-colombia.html#aseguramiento-de-la-calidad-academica-en-la-universidad-nacional-de-colombia"><i class="fa fa-check"></i><b>1.3.6</b> <em><strong>Aseguramiento de la calidad académica en la Universidad Nacional de Colombia</strong></em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Cap02.html"><a href="2-Cap02.html"><i class="fa fa-check"></i><b>2</b> <strong>El <em>boom</em> de los datos y el protagonismo de la tecnología</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="2-1-los-datos.html"><a href="2-1-los-datos.html"><i class="fa fa-check"></i><b>2.1</b> <strong>Los datos</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="2-2-big-data.html"><a href="2-2-big-data.html"><i class="fa fa-check"></i><b>2.2</b> <strong><em>Big data</em></strong></a></li>
+<li class="chapter" data-level="2.3" data-path="2-3-analiticamineria-de-datos-analytics.html"><a href="2-3-analiticamineria-de-datos-analytics.html"><i class="fa fa-check"></i><b>2.3</b> <strong>Analítica/minería de datos (<em>analytics</em>)</strong></a></li>
+<li class="chapter" data-level="2.4" data-path="2-4-inteligencia-de-negocios.html"><a href="2-4-inteligencia-de-negocios.html"><i class="fa fa-check"></i><b>2.4</b> <strong>Inteligencia de negocios</strong></a></li>
+<li class="chapter" data-level="2.5" data-path="2-5-estadistica.html"><a href="2-5-estadistica.html"><i class="fa fa-check"></i><b>2.5</b> <strong>Estadística</strong></a></li>
+<li class="chapter" data-level="2.6" data-path="2-6-ciencia-de-los-datos.html"><a href="2-6-ciencia-de-los-datos.html"><i class="fa fa-check"></i><b>2.6</b> <strong>Ciencia de los datos</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Cap03.html"><a href="3-Cap03.html"><i class="fa fa-check"></i><b>3</b> <strong>Gestión de la información cuantitativa en las universidades: el encuentro de dos mundos</strong></a><ul>
+<li class="chapter" data-level="3.1" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><i class="fa fa-check"></i><b>3.1</b> <strong>Contexto de la información cuantitativa en las universidades estatales en Colombia</strong></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.1.-fin-de-la-informacion-cuantitativa-proposito-superior"><i class="fa fa-check"></i><b>3.1.1</b> <strong><em>Nivel 1.1. Fin de la información cuantitativa –propósito superior–</em></strong></a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.2.-politicas-normas-actores-nacionales-e-internacionales"><i class="fa fa-check"></i><b>3.1.2</b> <strong><em>Nivel 1.2. Políticas, normas, actores nacionales e internacionales</em></strong></a></li>
+<li class="chapter" data-level="3.1.3" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.3.-demandas-de-informacion"><i class="fa fa-check"></i><b>3.1.3</b> <strong><em>Nivel 1.3. Demandas de información</em></strong></a></li>
+<li class="chapter" data-level="3.1.4" data-path="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html"><a href="3-1-contexto-de-la-informacion-cuantitativa-en-las-universidades-estatales-en-colombia.html#nivel-1.4.-modelo-de-gestion-administrativa-y-estructura-organizacional"><i class="fa fa-check"></i><b>3.1.4</b> <strong><em>Nivel 1.4. Modelo de gestión administrativa y estructura organizacional</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html"><i class="fa fa-check"></i><b>3.2</b> <strong>Contexto académico y técnico de los datos</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.1.-tipos-de-datos"><i class="fa fa-check"></i><b>3.2.1</b> <strong><em>Nivel 2.1. Tipos de datos</em></strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.2.-disciplinas-y-tendencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><em>Nivel 2.2. Disciplinas y tendencias</em></strong></a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.3.-aproximaciones-enfasis"><i class="fa fa-check"></i><b>3.2.3</b> <strong><em>Nivel 2.3. Aproximaciones – Énfasis</em></strong></a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.4.-metodos-y-tecnicas"><i class="fa fa-check"></i><b>3.2.4</b> <strong><em>Nivel 2.4. Métodos y técnicas</em></strong></a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.5.-fundamentos-bases-teoricas"><i class="fa fa-check"></i><b>3.2.5</b> <strong><em>Nivel 2.5. Fundamentos – Bases teóricas</em></strong></a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-2-contexto-academico-y-tecnico-de-los-datos.html"><a href="3-2-contexto-academico-y-tecnico-de-los-datos.html#nivel-2.6.-herramientas"><i class="fa fa-check"></i><b>3.2.6</b> <strong><em>Nivel 2.6. Herramientas</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-3-en-sintesis.html"><a href="3-3-en-sintesis.html"><i class="fa fa-check"></i><b>3.3</b> <strong>En síntesis</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Cap04.html"><a href="4-Cap04.html"><i class="fa fa-check"></i><b>4</b> <strong>Cuantificación y medición en las universidades - Una aproximación descriptiva</strong></a><ul>
+<li class="chapter" data-level="4.1" data-path="4-1-que-y-como-medir.html"><a href="4-1-que-y-como-medir.html"><i class="fa fa-check"></i><b>4.1</b> <strong>¿Qué y cómo medir?</strong></a></li>
+<li class="chapter" data-level="4.2" data-path="4-2-diferencia-entre-estadisticas-e-indicadores.html"><a href="4-2-diferencia-entre-estadisticas-e-indicadores.html"><i class="fa fa-check"></i><b>4.2</b> <strong>Diferencia entre estadísticas e indicadores</strong></a></li>
+<li class="chapter" data-level="4.3" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><i class="fa fa-check"></i><b>4.3</b> <strong>Once características asociadas a las estadísticas</strong></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#construidas-a-partir-de-informacion-poblacional-o-muestral"><i class="fa fa-check"></i><b>4.3.1</b> <strong><em>Construidas a partir de información poblacional o muestral</em></strong></a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#conformar-cifras-agregadas"><i class="fa fa-check"></i><b>4.3.2</b> <strong><em>Conformar cifras agregadas</em></strong></a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#caracterizar-y-desagregar-rasgos-de-interes-de-los-individuos-que-conforman-las-poblaciones-o-muestras"><i class="fa fa-check"></i><b>4.3.3</b> <strong><em>Caracterizar y desagregar rasgos de interés de los individuos que conforman las poblaciones o muestras</em></strong></a></li>
+<li class="chapter" data-level="4.3.4" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#representar-el-presente-y-el-pasado"><i class="fa fa-check"></i><b>4.3.4</b> <strong><em>Representar el presente y el pasado</em></strong></a></li>
+<li class="chapter" data-level="4.3.5" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#tener-la-capacidad-de-reconocer-y-representar-el-comportamiento-de-grupos-poblacionales-minoritarios"><i class="fa fa-check"></i><b>4.3.5</b> <strong><em>Tener la capacidad de reconocer y representar el comportamiento de grupos poblacionales minoritarios</em></strong></a></li>
+<li class="chapter" data-level="4.3.6" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#poder-ser-representadas-de-manera-tabular-y-grafica"><i class="fa fa-check"></i><b>4.3.6</b> <strong><em>Poder ser representadas de manera tabular y gráfica</em></strong></a></li>
+<li class="chapter" data-level="4.3.7" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#estar-orientadas-y-delimitadas-por-normas-y-conceptos-estandares-clasificaciones-y-nomenclaturas"><i class="fa fa-check"></i><b>4.3.7</b> <strong><em>Estar orientadas y delimitadas por normas y conceptos, estándares, clasificaciones y nomenclaturas</em></strong></a></li>
+<li class="chapter" data-level="4.3.8" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#estar-disponibles-a-traves-de-multiples-mecanismos-de-difusion-y-comunicacion"><i class="fa fa-check"></i><b>4.3.8</b> <strong><em>Estar disponibles a través de múltiples mecanismos de difusión y comunicación</em></strong></a></li>
+<li class="chapter" data-level="4.3.9" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#hacer-uso-intensivo-de-las-nuevas-tecnologias-de-la-informacion-y-las-comunicaciones"><i class="fa fa-check"></i><b>4.3.9</b> <strong><em>Hacer uso intensivo de las nuevas tecnologías de la información y las comunicaciones</em></strong></a></li>
+<li class="chapter" data-level="4.3.10" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#ser-construidas-a-traves-de-un-proceso-estadistico"><i class="fa fa-check"></i><b>4.3.10</b> <strong><em>Ser construidas a través de un proceso estadístico</em></strong></a></li>
+<li class="chapter" data-level="4.3.11" data-path="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html"><a href="4-3-once-caracteristicas-asociadas-a-las-estadisticas.html#aportar-a-la-creacion-de-nuevas-estadisticas-o-indicadores"><i class="fa fa-check"></i><b>4.3.11</b> <strong><em>Aportar a la creación de nuevas estadísticas o indicadores</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><i class="fa fa-check"></i><b>4.4</b> <strong>Indicadores de desarrollo o cumplimiento</strong></a><ul>
+<li class="chapter" data-level="4.4.1" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html#gestion-de-indicadores-de-desarrollo-o-cumplimiento"><i class="fa fa-check"></i><b>4.4.1</b> <strong><em>Gestión de indicadores de desarrollo o cumplimiento</em></strong></a></li>
+<li class="chapter" data-level="4.4.2" data-path="4-4-indicadores-de-desarrollo-o-cumplimiento.html"><a href="4-4-indicadores-de-desarrollo-o-cumplimiento.html#tipos-de-indicadores-de-desarrollo-o-cumplimiento"><i class="fa fa-check"></i><b>4.4.2</b> <strong><em>Tipos de indicadores de desarrollo o cumplimiento</em></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-conclusiones-y-recomendaciones.html"><a href="5-conclusiones-y-recomendaciones.html"><i class="fa fa-check"></i><b>5</b> <strong>Conclusiones y recomendaciones</strong></a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><center><a href="http://unal.edu.co/" target="blank"> Universidad Nacional de Colombia </a></center></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Gestión de la información cuantitativa en las universidades</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="big-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> <strong><em>Big data</em></strong></h2>
+<p>Con la llegada del siglo XXI y con el desarrollo de las nuevas tecnologías de la información y las comunicaciones, hemos superado nuestras capacidades para: almacenar y conservar grandes cantidades de datos, extender el espectro a una gran variedad de datos, y procesar y extraer de manera rápida información contenida en estos para generar nuevo conocimiento o tomar mejores decisiones. A la gran cantidad y variedad de datos que la humanidad está generando a diario, así como la capacidad de almacenamiento y la velocidad con la que estos están siendo procesados se le conoce como <em>Big Data</em><a href="#fn90" class="footnote-ref" id="fnref90"><sup>90</sup></a></p>
+<p>Aunque no existe precisión sobre el significado de <em>Big Data</em>, este fenómeno, “se refiere a cosas que se pueden hacer a gran escala, pero no a una escala inferior, para extraer nuevas percepciones o crear nuevas formas de valor, de tal forma que trasforman los mercados, las organizaciones, las relaciones entre los ciudadanos y los gobiernos, etc.”, según <span class="citation">(Mayer-Schönberger, V. y Cukier, K. <a href="#ref-mayer2013big">2013</a>, pág. 17)</span>. Así mismo, según estos autores, el término más adecuado para describir lo que en la actualidad está sucediendo a raíz de este fenómeno es la datificación del todo: “Datificar se refiere a recopilar información sobre cuanto existe bajo el sol –incluyendo cosas que en modo alguno solíamos considerar información antes, como la localización de una persona, las vibraciones de un motor o la tensión que soporta un puente– y transformarla a formato de datos para cuantificarlas” (pág. 28).</p>
+<p>En conclusión, el fenómeno del <em>Big Data</em> se caracteriza por la intención contemporánea de convertir en datos (datificar), dada la capacidad tecnológica actualmente disponible, “una inmensa cantidad de cosas que antes nunca pudieron medirse, almacenarse, analizarse y compartirse” <span class="citation">(Mayer-Schönberger, V. y Cukier, K. <a href="#ref-mayer2013big">2013</a>, pág. 31)</span>. El surgimiento del <em>Big Data</em> como la estrategia que cobija la intención de datificar, se caracteriza principalmente por tres rasgos definitorios popularizados a través de las 3 V: volumen, velocidad y variedad<a href="#fn91" class="footnote-ref" id="fnref91"><sup>91</sup></a>.</p>
+<p>En primer lugar, el volumen hace referencia a la cantidad creciente de datos disponibles (<em>datificación</em>) y a los retos que estos están generando tanto para su almacenamiento como para su análisis. Del byte<a href="#fn92" class="footnote-ref" id="fnref92"><sup>92</sup></a> de años atrás pasamos rápidamente a los megabytes; hoy ya no nos son ajenos términos como los gigabytes o terabytes y seguramente, en un futuro no muy lejano, serán de uso cotidiano términos como zettabytes y yottabytes. Estos términos, que hacen referencia a la unidad de medida que representa el tamaño de una tabla/archivo que contiene un conjunto dado de datos, vienen incursionando de manera vertiginosa en nuestra cotidianidad gracias al aumento exponencial de la capacidad tecnológica de almacenamiento disponible, a los bajos costos, a la existencia de múltiples y variados mecanismos de captura de datos, a la facilidad de acceso a los datos por el crecimiento del internet, al surgimiento de fuertes movimientos de apertura de datos y la presencia de nuevas apuestas tecnológicas como la computación en la nube (<em>cloud computing</em>).</p>
+<p>El segundo rasgo del <em>Big Data</em> es la <em>variedad</em>, que hace referencia a los diferentes tipos de datos que son extraídos en la actualidad desde múltiples y diversas fuentes de información. De un mundo analógico, pasando por uno digital, hemos evolucionado hasta uno en donde todo cuanto está a nuestro alrededor es susceptible de ser reducido a datos, es decir, <em>datificado</em>. Datos asociados a imágenes, audios, textos, videos, datos georreferenciados, datos provenientes de millones de sitios web, etc., se han sumado al contexto tradicional de información estructurada para conformar una verdadera explosión tanto en el volumen como en la variedad de tipos de datos actualmente disponibles y susceptibles de ser analizados.</p>
+<p>La <em>variedad</em> en los tipos de datos hoy existentes exige ir más allá del paradigma tradicional de datos estructurados e incursionar en el mundo de los datos semiestructurados y no estructurados<a href="#fn93" class="footnote-ref" id="fnref93"><sup>93</sup></a>. La variedad, a diferencia del volumen, sí es una de las grandes responsables del surgimiento del término <em>Big Data</em> pues este fenómeno no existía años atrás y su tratamiento actual ha implicado grandes trasformaciones en la forma como los diversos tipos de datos existentes deben ser capturados, cómo deben ser almacenamos y conservados y, sobre todo, cómo y a través de qué técnicas deben ser analizados.</p>
+<p>La <em>velocidad</em> es la tercera característica que define el <em>Big Data</em>. Hoy la disponibilidad y oportunidad con la que se entrega la información extraída a partir de los datos juega un rol central en la sostenibilidad y el crecimiento de muchas organizaciones, en especial aquellas de naturaleza privada. Horas, minutos e incluso segundos caracterizan, en muchos casos, aquello que se considera oportuno. En este sentido, los métodos tradicionales de análisis y entrega de información requieren de nuevas y creativas formas de abordar los datos, escenario donde la tecnología juega un rol central. La velocidad con la que se procesa y entrega la información es fundamental para las organizaciones de carácter público y privado, no obstante, hay importantes diferencias entre lo que se considera oportuno al interior de estos contextos. Por ejemplo, en el ámbito de las universidades, la oportunidad en las cifras puede estar asociada con disponer de información cuantitativa de manera anual, semestral o a lo sumo mensual. Desde luego que estas temporalidades en la disposición de cifras del contexto universitario son, por ejemplo, inoportunas en ámbitos como el de los mercados accionarios.</p>
+<p>La variedad en los datos hoy disponibles, el volumen y la velocidad con la que estos están siendo generados, así como la capacidad existente para ser analizados ha conllevado una verdadera revolución en la forma como actualmente los capturamos, los almacenamos, los procesamos y extraemos conocimiento a partir de ellos.</p>
+<p>A la encuesta y el registro administrativo como mecanismos tradicionales de captura de datos se han adicionado nuevos instrumentos, principalmente tecnológicos, como los sensores, las cámaras, los móviles, los sistemas de posicionamiento global (GPS por sus siglas en inglés), los secuenciadores a gran escala de ADN, los telescopios, las transacciones electrónicas globalizadas, las redes sociales, la web, etc. De la misma manera, el aumento significativo en el volumen y la variedad de datos hoy existentes, sumado a la existencia de redes tecnológicas de comunicación modernas, ha permitido la construcción de bases de datos capaces de hacer uso de recursos tecnológicos compartidos en múltiples servidores ubicados en distintas latitudes de nuestro planeta, y ha superado el paradigma tradicional de las bases de datos SQL, y ha incursionado en el de las bases de datos no solamente SQL o NoSQL<a href="#fn94" class="footnote-ref" id="fnref94"><sup>94</sup></a>. Este fenómeno ha implicado evolucionar a nuevas y especializadas formas de capturar, almacenar y acceder a datos no estructurados o semiestructurados, principalmente. A los proveedores tradicionales de bases de datos SQL como Oracle, MySQL, PosgreSQL, Microsoft SQL Server, ODBC, SQLite, DB2, etc., hoy se suman nuevos proveedores especializados como Cassandra, mongoDB, Neo4j, Apache HBASE, Redis, CouchDB, GoogleBigtable, los cuales han llegado para quedarse y para consolidar un amplio, diverso y creciente escenario de bases de datos y, con ellos, de nuevas y variadas fuentes de datos disponibles para el análisis y la extracción de la información allí contenida.</p>
+<p>El gran volumen de datos existente, su variedad y la velocidad con la que se desea extraer conocimiento a partir de los mismos ha implicado a nivel tecnológico la implementación de innovadoras formas de procesamiento de los datos dada la baja capacidad de los métodos tradicionales estadísticos para abordar estos retos en los tiempos requeridos y a unos costos computaciones aceptables. Algunas de las nuevas formas de analizar la información en un mundo gobernado por el <em>Big Data</em> son los modelos de computación paralela que hacen uso de paradigmas computacionales como MapReduce, en donde se divide un gran problema de análisis de datos en cientos, miles o millones de pequeños problemas en igual cantidad de nodos o servidores que trabajan de manera simultánea en lugares diferentes y bajo marcos de trabajo <em>frameworks</em> como Hadoop o Spark.</p>
+<p>El crecimiento en la cantidad de datos, en su variedad y en la velocidad con la que se debe generar información a partir de los mismos, así como la reciente formulación en el contexto público colombiano, como se presentó en el capítulo anterior, de una política nacional de explotación de datos <em>Big Data</em> (Conpes 3920), presiona en la actualidad a las entidades, y entre estas a las universidades, para que, además de una gestión y disposición de las cifras descriptivas institucionales provistas por marcos tradicionales, incursionen en el dominio y uso de técnicas que permiten extraer conocimiento que se encuentra oculto en las cifras y que no es adquirible a partir de una aproximación descriptiva de los datos institucionales disponibles.</p>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references">
+<div id="ref-mayer2013big">
+<p>Mayer-Schönberger, V. y Cukier, K. 2013. <em>Big data: la revolución de los datos masivos</em>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="90">
+<li id="fn90"><p>Por ejemplo, a manera de ilustración de este fenómeno y según @LoriLewis y @OfficiallyChadd, actualmente <em>en un minuto</em> en internet se realizan 3,7 millones de búsquedas en Google, se ven 4,3 millones de horas de video en YouTube, se ven 266.000 horas de contenido en Netflix, se envían 481.000 tuits, se intercambian 38 millones de mensajes a través de WhatsApp, se realizan 862.823 compras en línea, se envían 187 millones de correos electrónicos, se inician 973.000 sesiones en Facebook, se descargan 375.000 aplicaciones de App Store y Google Play, etc. Y, actualmente, la humanidad está en capacidad de almacenar y procesar toda esta cantidad de datos para distintos propósitos.<a href="2-2-big-data.html#fnref90" class="footnote-back">↩</a></p></li>
+<li id="fn91"><p>Además del volumen, la variedad y la velocidad, al fenómeno del Big Data se le asocian en menor medida otros rasgos característicos como la veracidad de los datos, la viabilidad para extraer conocimiento, el valor potencial de los mismos, así como la capacidad de estos para ser representados de manera gráfica.<a href="2-2-big-data.html#fnref91" class="footnote-back">↩</a></p></li>
+<li id="fn92"><p>En el sitio web <a href="https://es.wikipedia.org/wiki/Byte" class="uri">https://es.wikipedia.org/wiki/Byte</a> se puede explorar el tamaño de las diferentes unidades actualmente existentes para la medición del almacenamiento de información a nivel tecnológico.<a href="2-2-big-data.html#fnref92" class="footnote-back">↩</a></p></li>
+<li id="fn93"><p>En la actualidad se estima que entre un 80 y un 90% de los datos existentes a nivel mundial corresponden a datos semiestructurados y, en especial, a datos no estructurados, lo que contrasta, por ejemplo, con la concentración de una proporción importante de las capacidades académicas, analíticas, y en una menor medida tecnológicas, centradas en la gestión de datos de tipo estructurado.<a href="2-2-big-data.html#fnref93" class="footnote-back">↩</a></p></li>
+<li id="fn94"><p>Aunque no existe precisión sobre la definición de una base de datos NoSQL, estas se caracterizan por su capacidad de réplica y de distribución del almacenamiento de los datos en tiempo real en múltiples servidores.<a href="2-2-big-data.html#fnref94" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+<script src="libs/unal/js/widgets.js"></script>
+<script src="libs/unal/js/full-screen-helper.js"></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-1-los-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-3-analiticamineria-de-datos-analytics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Libro-Conceptual.pdf", "Libro-Conceptual.epub", "Libro-Conceptual.mobi"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
