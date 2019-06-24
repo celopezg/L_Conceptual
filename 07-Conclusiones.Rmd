@@ -1,4 +1,4 @@
-# **Conclusiones y recomendaciones**
+# **Conclusiones y recomendaciones** {-}
 
 Los datos, en la actualidad, han dejado de ser un recurso escaso y de poco interés y se están convirtiendo en uno abundante y de valor estratégico para la gestión de las entidades públicas modernas y, entre estas, sus universidades. Estos, traducidos en información, juegan un rol protagónico en los procesos permanentes de rendición de cuentas a la sociedad; aumentan, si se disponen de manera abierta y accesible, los niveles de transparencia institucional y de confianza ciudadana sobre las actuaciones públicas; favorecen la planeación y la toma de decisiones nacionales, sectoriales e institucionales basadas en información; permiten el monitoreo y la evaluación de políticas públicas materializadas en planes, programas y proyectos de desarrollo y, finalmente, favorecen el estudio, el conocimiento, la predicción y la implementación de acciones preventivas o correctivas que aporten, desde lo público, a la construcción de una mejor sociedad.
 
